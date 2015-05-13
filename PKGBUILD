@@ -18,9 +18,9 @@ md5sums=('a7098920c980d2c7621dd93c89fa7a6d'
          '77e35c3c5b8020192eec29ec1d8ad916')
 package() {
 
-  install -Dm 755 usr/sbin/init-headphone  $pkgdir/usr/bin/init-headphone 
+  install -Dm 755 init-headphone  $pkgdir/usr/bin/init-headphone 
 
-  install -Dm 755 {,$pkgdir/}etc/modules-load.d/init-headphone.conf  
+  install -Dm 755 init-headphone.conf  $pkgdir/etc/modules-load.d/init-headphone.conf
 
   install -Dm 755 init-headphone.service  $pkgdir/usr/lib/systemd/system/init-headphone.service  
 }
